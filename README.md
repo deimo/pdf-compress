@@ -31,3 +31,6 @@ python/python3 pdfc -f {file_name}
 # 批量压缩PDF
 python/python3 pdfc -r {folder_path}
 ```
+
+## 参考
+**theeko74**用户的[github](https://github.com/theeko74/pdfc)
