@@ -46,7 +46,7 @@ def compress(input_file_path, output_file_path=None, power=0, bulk=False):
         if parent_path in ['', '.']:  # 如果是当前路径
             output_folder = 'compressed/'
         else:
-            output_folder = parent_path + 'compressed/'
+            output_folder = os.path.join(parent_path, 'compressed')
 
         # 如果遇到文件名重复就一直拼接1
         while True:
@@ -110,24 +110,11 @@ def bulk_compress(input_folder, power=0):
     items = os.listdir(input_folder)
     items = [item for item in items if item.split('.')[-1].lower() == 'pdf']  # 找出所有的PDF文件
 
-    parent_path = os.path.dirname(input_folder)
-    backup_path = parent_path + 'PDFバックアップ'
-
-    # 如果遇到文件名重复就一直拼接1
-    while True:
-        if os.path.exists(backup_path):
-            backup_path = backup_path + str(1)
-        else:
-            os.mkdir(backup_path)
-            break
-
     # 开始压缩并移动文件
     for item in items:
-        output_file_path = output_folder + '/' + item
-        input_file_path = input_folder + '/' + item
+        output_file_path = os.path.join(output_folder, item)
+        input_file_path = os.path.join(input_folder, item)
         compress(input_file_path, output_file_path, power, bulk=True)
-        # 移动文件
-        shutil.move(input_file_path, backup_path)
 
 
 def main():
