@@ -110,7 +110,7 @@ def bulk_compress(input_folder, power=0):
     items = os.listdir(input_folder)
     items = [item for item in items if item.split('.')[-1].lower() == 'pdf']  # 找出所有的PDF文件
 
-    # 开始压缩并移动文件
+    # 开始压缩
     for item in items:
         output_file_path = os.path.join(output_folder, item)
         input_file_path = os.path.join(input_folder, item)
