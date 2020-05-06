@@ -13,9 +13,9 @@ brew install ghostscript
 2. 使用脚本
 ```
 # 压缩单个PDF
-python/python3 pdfc -f {file_name}
+python/python3 pdfc.py -f {file_name}
 # 批量压缩PDF
-python/python3 pdfc -r {folder_path}
+python/python3 pdfc.py -r {folder_path}
 ```
 
 ## Windows使用
@@ -27,9 +27,9 @@ python/python3 pdfc -r {folder_path}
 2. 使用脚本
 ```
 # 压缩单个PDF
-python/python3 pdfc -f {file_name}
+python/python3 pdfc.py -f {file_name}
 # 批量压缩PDF
-python/python3 pdfc -r {folder_path}
+python/python3 pdfc.py -r {folder_path}
 ```
 
 ## 参考
