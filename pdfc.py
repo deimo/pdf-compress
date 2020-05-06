@@ -31,7 +31,7 @@ def get_ghostscript_path():
     raise FileNotFoundError(f'No GhostScript executable was found on path ({"/".join(gs_names)})')
 
 
-def compress(input_file_path, output_file_path=None, power=0, bulk=False):
+def compress(input_file_path, output_file_path=None, power=3, bulk=False):
     """Function to compress PDF via Ghostscript command line interface"""
     quality = {
         0: '/default',
