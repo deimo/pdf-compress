@@ -21,7 +21,7 @@ python/python3 pdfc.py -r {folder_path}
 ## Windows使用
 
 1. 安装相关
-[Ghostscript](https://www.ghostscript.com/download/gsdnld.html)
+[Ghostscript](https://ghostscript.com/releases/index.html)
 
 
 2. 使用脚本
